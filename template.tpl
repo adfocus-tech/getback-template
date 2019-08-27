@@ -268,17 +268,17 @@ const encode = require('encodeUriComponent');
 const id = encode(makeString(data.getbackId));
 const orderValue = encode(makeString(data.orderValue));
 const orderNumber = encode(makeString(data.orderNumber));
-const voucherCode = encode(makeString(data.voucherCode));
-const email = encode(makeString(data.email));
-const subText = encode(makeString(data.customInformation));
+const voucherCode = data.voucherCode;
+const email = data.email;
+const subText = data.customInformation;
 const rate = data.rate;
 let url = '';
 
 if (data.type == 'conversion') {
   url = 'https://www.getback.ch/' + id + '/conversion/?ordervalue=' + orderValue + '&ordernumber=' + orderNumber;
-  voucherCode ? url += '&vouchercode=' + encode(voucherCode) : '';
-  email ? url += '&email=' + email : '';
-  subText ? url += '&subtext=' + subText : '';
+  voucherCode ? url += '&vouchercode=' + encode(makeString(voucherCode)) : '';
+  email ? url += '&email=' + encode(makeString(email)) : '';
+  subText ? url += '&subtext=' + encode(makeString(subText)) : '';
   rate ? url += '&rate=' + rate : '';
 } else if (data.type == 'pageview') {
    url = 'https://www.getback.ch/' + id;
