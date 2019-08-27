@@ -262,24 +262,24 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const logToConsole = require('logToConsole');
 const injectScript = require('injectScript');
 const queryPermission = require('queryPermission');
+const makeString = require('makeString');
 const encode = require('encodeUriComponent');
 
-const id = data.getbackId;
-const orderValue = data.orderValue;
-const orderNumber = data.orderNumber;
-const voucherCode = data.voucherCode;
-const email = data.email;
-const subText = data.customInformation;
+const id = encode(makeString(data.getbackId));
+const orderValue = encode(makeString(data.orderValue));
+const orderNumber = encode(makeString(data.orderNumber));
+const voucherCode = encode(makeString(data.voucherCode));
+const email = encode(makeString(data.email));
+const subText = encode(makeString(data.customInformation));
 const rate = data.rate;
 let url = '';
 
 if (data.type == 'conversion') {
   url = 'https://www.getback.ch/' + id + '/conversion/?ordervalue=' + orderValue + '&ordernumber=' + orderNumber;
-
   voucherCode ? url += '&vouchercode=' + encode(voucherCode) : '';
-  email ? url += '&email=' + encode(email) : '';
-  subText ? url += '&subtext=' + encode(subText) : '';
-  rate ? url += '&rate=' + encode(rate) : '';
+  email ? url += '&email=' + email : '';
+  subText ? url += '&subtext=' + subText : '';
+  rate ? url += '&rate=' + rate : '';
 } else if (data.type == 'pageview') {
    url = 'https://www.getback.ch/' + id;
 }
