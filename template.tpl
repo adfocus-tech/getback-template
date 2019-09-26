@@ -1,8 +1,16 @@
-﻿___INFO___
+﻿___TERMS_OF_SERVICE___
+
+By creating or modifying this file you agree to Google Tag Manager's Community
+Template Gallery Developer Terms of Service available at
+https://developers.google.com/tag-manager/gallery-tos (or such other URL as
+Google may provide), as modified from time to time.
+
+___INFO___
 
 {
   "displayName": "Getback Tag",
-  "description": "Getback Tag",
+  "description": "Tag for the Getback conversion optimisation & web push technology. For more information visit: https://www.getback.app/en/",
+  "categories": ["PERSONALIZATION", "LEAD_GENERATION", "EXPERIMENTATION", "CONVERSION_TRACKING"],
   "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
