@@ -1,5 +1,5 @@
 homepage: "www.getback.app" ,
 documentation: "https://docs.getback.app" ,
 versions:
-- sha: 3eb9e45
+- sha: 34bf40f
   changeNotes: Initial release.
