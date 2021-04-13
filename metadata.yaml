@@ -1,5 +1,7 @@
-homepage: "www.getback.app" ,
-documentation: "https://docs.getback.app" ,
+homepage: "www.getback.app"
+documentation: "https://docs.getback.app"
 versions:
+- sha: 48a6711
+  changeNotes: Added gb_send function and gb_data variable to window
 - sha: 34bf40f
   changeNotes: Initial release.
